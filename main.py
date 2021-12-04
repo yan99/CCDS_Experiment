@@ -352,7 +352,7 @@ for (key1,key2, value) in score:
         image_name = key1.split('_')[1]
         score_dict.setdefault(image_name, []).append('0')
 
-fn2 = os.path.join(PROJECT_ROOT, 'tempfile_part1.txt')
+fn2 = os.path.join(PROJECT_ROOT, 'tempfile_results.txt')
 with open(fn2, 'w') as data:
     data.write(str(score_dict))
 #
@@ -362,7 +362,7 @@ with open(fn2, 'w') as data:
 #else:
 print('\n\t\t Please email "tempfile_part1.txt" and "yourname_results_part1.txt" to \n\t\t yan99@purdue.edu \n\t\t Thank you for your time!')
 print(score_dict)
-fn = os.path.join(PROJECT_ROOT, 'yourname_results_part1.txt')
+fn = os.path.join(PROJECT_ROOT, 'yourname_results.txt')
 with open(fn, 'wb') as handle:
     pickle.dump(score_dict, handle)
 
